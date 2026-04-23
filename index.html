@@ -6,23 +6,21 @@
   <title>Política de privacidade — a eito!</title>
   <style>
     body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; max-width: 680px; margin: 40px auto; padding: 0 24px; color: #111; line-height: 1.7; text-align: left; }
-    
-    /* Estilos para o logo */
     .logo-container { text-align: center; margin-bottom: 20px; }
     .app-logo { width: 80px; height: 80px; border-radius: 16px; border: 1px solid #eee; }
-
     h1 { font-size: 1.4rem; margin-bottom: 4px; letter-spacing: -0.02em; text-align: center; }
     p.sub { color: #666; font-size: 0.9rem; margin-top: 0; margin-bottom: 2.5rem; text-align: center; }
-    
     h2 { font-size: 1.1rem; margin-top: 2rem; margin-bottom: 0.5rem; border-bottom: 1px solid #eee; padding-bottom: 4px; }
     p { margin-bottom: 1.2rem; }
+    a { color: #007AFF; text-decoration: none; }
+    a:hover { text-decoration: underline; }
     .footer { margin-top: 4rem; padding-top: 2rem; border-top: 1px solid #eee; color: #666; font-size: 0.9rem; text-align: center; }
   </style>
 </head>
 <body>
 
   <div class="logo-container">
-    <img src="app_icon.png" alt="Logo a eito!" class="app-logo">
+    <img src="app-icon.png" alt="Logo a eito!" class="app-logo">
   </div>
 
   <h1>Política de privacidade</h1>
@@ -38,16 +36,29 @@
   <p>Todos os datos (letras, metadatos e audios) almacénanse localmente no dispositivo. O usuario ten control total sobre eles e pode exportalos ou eliminalos en calquera momento desde a propia aplicación.</p>
 
   <h2>Responsabilidade e uso do contido</h2>
-  <p><strong>a eito!</strong> é unha ferramenta técnica para organizar e gardar as túas propias letras e audios de forma privada. Como usuario, es o único responsable do contido que decidas introducir ou gravar. Se decides compartir estes ficheiros fóra da aplicación, es responsable de asegurar que tes os dereitos ou permisos necesarios para facelo. O desenvolvedor non se fai responsable do uso que fagas das funcións de exportación nin de posibles infraccións de dereitos de autor por parte dos usuarios.</p>
+  <p><strong>a eito!</strong> é unha ferramenta técnica para organizar e gardar as túas propias letras e audios de forma privada. Como usuario, es o único responsable do contido que decidas introducir ou gravar. Se decides compartir estes ficheiros fóra da aplicación, es responsable de asegurar que tes os dereitos ou permisos necesarios para facelo.</p>
 
   <h2>Exención de responsabilidade</h2>
-  <p>A aplicación proporciónase "tal cal" e para uso local. O desenvolvedor non se fai responsable da perda de datos (por exemplo, por fallos do dispositivo ou se se borra a aplicación), polo que se recomenda usar as funcións de copia de seguridade incluídas para protexer a túa información.</p>
+  <p>A aplicación proporciónase "tal cal" e para uso local. O desenvolvedor non se fai responsable da perda de datos (por exemplo, por fallos do dispositivo ou se se borra a aplicación), polo que se recomenda usar as funcións de copia de seguridade incluídas.</p>
 
   <h2>Contacto</h2>
-  <p>Para calquera dúbida ou consulta, podes contactar co desenvolvedor a través da ficha de Google Play 🌚</p>
+  <p>Para calquera dúbida ou consulta, podes contactar co desenvolvedor: 
+    <span id="mail-link"></span> 🌚
+  </p>
 
   <div class="footer">
     <p>© 2026 Nando.</p>
   </div>
+
+  <script>
+    // Ofuscación básica para evitar bots de spam
+    const user = "aeito.app";
+    const domain = "gmail.com";
+    const element = document.getElementById('mail-link');
+    const link = document.createElement('a');
+    link.href = `mailto:${user}@${domain}`;
+    link.innerText = "Enviar un correo electrónico";
+    element.appendChild(link);
+  </script>
 </body>
 </html>
